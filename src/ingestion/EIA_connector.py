@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 
 class EIAClient:
-    """Low-level client for EIA API v2 (HTTP + auth only)."""
+    """Client for EIA API v2 (HTTP + auth only)."""
 
     def __init__(self):
         env_path = Path(__file__).resolve().parent.parent.parent / ".env"
@@ -20,8 +20,9 @@ class EIAClient:
         params = dict(params)
         params["api_key"] = self.api_key
 
-        r = requests.get(url, params=params, timeout=20)
+        r = requests.get(url, params=params)
         r.raise_for_status()
+
 
         data = r.json().get("response", {}).get("data", [])
         if not data:
