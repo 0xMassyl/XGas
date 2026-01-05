@@ -18,10 +18,9 @@ class CalibrationResult:
         dt : float = 1/252 # market open days
     
     
-# class OUCalibrator:
-#     """
-#     Calibre le modèle OU sur les données officielles de l'EIA (Henry Hub).
-#     """
-
-#     def calibrate(prices : )
+class OUCalibrator:
+    """
+    Calibre le modèle OU sur les données officielles de l'EIA (Henry Hub).
+    """
+        
         

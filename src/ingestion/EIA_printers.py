@@ -43,10 +43,7 @@ def print_storage_and_price(df: pd.DataFrame, n=20):
     )
     
     
-    
-    
-    
-    
+
 
 # =============================================
 #                    MAIN       
@@ -64,8 +61,6 @@ if __name__ == "__main__":
     #Displaying stock valuation ins Millions $
     df["stock_valuation"] = (df["storage_bcf"] * 1.03* 1e-3* df["HH__weekly_spot_prices"]
     )
-
-
 
     # Defining again attrs bc pandas is ignoring them if joint is made
     df.attrs["source"] = "EIA (U.S. Energy Information Administration)"
